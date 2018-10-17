@@ -15,7 +15,7 @@ source:
   - url: https://software.tech.bloomberg/BLPAPI-Experimental-Generic/blpapi_cpp_3.8.1.1-darwin.tar.gz  # [osx]
     sha256: 1a74df5f15226aab3fdd7d4f5c765ccfee8cf130d6917962af014a7ac673142f  # [osx]
 build:
-  number: 0
+  number: 1000
 
 requirements:
   build:
