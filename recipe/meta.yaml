@@ -1,12 +1,10 @@
 {% set name = "blpapi" %}
-{% set version = "3.9.2" %}
-{% set version_sha = "4c3cbf3fb63fd338360d55188f6a59568023be6e16531d4bd307ac59a297fd96" %}
-{% set blpapicpp_linux_version = "3.8.18.1" %}
-{% set blpapicpp_win_version = "3.8.18.1" %}
-{% set blpapicpp_osx_version = "3.8.1.1" %}
-{% set blpapicpp_linux_sha = "c6c425f714b461ec618e6900bda8d9b4fc919892538ccfbf8c9a774e9e234fee" %}
-{% set blpapicpp_win_sha = "d62e3f109665f027e2ba3117d015c06a20d5e79e273777ef87915c82311d3fec" %}
-{% set blpapicpp_osx_sha = "1a74df5f15226aab3fdd7d4f5c765ccfee8cf130d6917962af014a7ac673142f" %}
+{% set version = "3.12.2" %}
+{% set version_sha = "d6676adcfb2e8e9fd3a485525b7efd5634cec94d783bdfe3d3f49e3fa31b4a4e" %}
+{% set blpapicpp_linux_version = "3.12.2.1" %}
+{% set blpapicpp_win_version = "3.12.2.1" %}
+{% set blpapicpp_linux_sha = "444742150ed4420ffe48322838487d7dc11d07409c9056e0f6fd83e239589922" %}
+{% set blpapicpp_win_sha = "3123b5d2592ccc6f8bdf969204afae3c2af1b02d1e1e95c8275b02e48a00fc8a" %}
 
 
 package:
@@ -16,17 +14,15 @@ package:
 source:
   - url: https://bloomberg.bintray.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: {{ version_sha }}
-  - url: https://software.tech.bloomberg/BLPAPI-Stable-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
+  - url: https://bloomberg.bintray.com/BLPAPI-Experimental-Generic/blpapi_cpp_3.12.2.1-linux.tar.gz  # [linux]
     sha256: {{ blpapicpp_linux_sha }}  # [linux]
-  - url: https://software.tech.bloomberg/BLPAPI-Stable-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
+  - url: https://software.tech.bloomberg/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
     sha256: {{ blpapicpp_win_sha }}  # [win]
-  - url: https://software.tech.bloomberg/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-darwin.tar.gz  # [osx]
-    sha256: {{ blpapicpp_osx_sha }}  # [osx]
+
 build:
-  number: 1
+  number: 0
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_linux_version }}_{{ PKG_BUILDNUM }}  # [linux]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_win_version }}_{{ PKG_BUILDNUM }}  # [win]
-  string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_osx_version }}_{{ PKG_BUILDNUM }}  # [osx]
 
 requirements:
   build:
