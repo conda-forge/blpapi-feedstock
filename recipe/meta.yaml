@@ -20,7 +20,8 @@ source:
     sha256: {{ blpapicpp_win_sha }}  # [win]
 
 build:
-  number: 0
+  number: 1
+  skip: true  # [osx]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_linux_version }}_{{ PKG_BUILDNUM }}  # [linux]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_win_version }}_{{ PKG_BUILDNUM }}  # [win]
 
