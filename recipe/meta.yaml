@@ -1,5 +1,5 @@
 {% set name = "blpapi" %}
-{% set version = "3.12.2" %}
+{% set version = "3.13.0" %}
 {% set version_sha = "d6676adcfb2e8e9fd3a485525b7efd5634cec94d783bdfe3d3f49e3fa31b4a4e" %}
 {% set blpapicpp_linux_version = "3.12.2.1" %}
 {% set blpapicpp_win_version = "3.12.2.1" %}
@@ -20,7 +20,7 @@ source:
     sha256: {{ blpapicpp_win_sha }}  # [win]
 
 build:
-  number: 1001
+  number: 0
   skip: true  # [osx]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_linux_version }}_{{ PKG_BUILDNUM }}  # [linux]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_win_version }}_{{ PKG_BUILDNUM }}  # [win]
