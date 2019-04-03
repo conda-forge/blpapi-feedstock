@@ -1,10 +1,7 @@
 {% set name = "blpapi" %}
 {% set version = "3.13.0" %}
-{% set version_sha = "d6676adcfb2e8e9fd3a485525b7efd5634cec94d783bdfe3d3f49e3fa31b4a4e" %}
-{% set blpapicpp_linux_version = "3.12.2.1" %}
-{% set blpapicpp_win_version = "3.12.2.1" %}
-{% set blpapicpp_linux_sha = "444742150ed4420ffe48322838487d7dc11d07409c9056e0f6fd83e239589922" %}
-{% set blpapicpp_win_sha = "3123b5d2592ccc6f8bdf969204afae3c2af1b02d1e1e95c8275b02e48a00fc8a" %}
+{% set blpapicpp_linux_version = "3.12.3.1" %}
+{% set blpapicpp_win_version = "3.12.3.1" %}
 
 
 package:
@@ -13,11 +10,11 @@ package:
 
 source:
   - url: https://bloomberg.bintray.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: {{ version_sha }}
-  - url: https://bloomberg.bintray.com/BLPAPI-Experimental-Generic/blpapi_cpp_3.12.2.1-linux.tar.gz  # [linux]
-    sha256: {{ blpapicpp_linux_sha }}  # [linux]
+    sha256: a3386e0a5080d5b05e07480d7787568227ae77eb46906edf906fda190c71eb7e
+  - url: https://bloomberg.bintray.com/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
+    sha256: 3faf881921912de18eec687f47b976d8d924eb77ba0cfcd565b5330ab99a8765  # [linux]
   - url: https://software.tech.bloomberg/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
-    sha256: {{ blpapicpp_win_sha }}  # [win]
+    sha256: 5d494927cc3eab28b7bcfd8ee32a23f0e38a7cd5ab4402cf898ea8fea5040ebc  # [win]
 
 build:
   number: 0
