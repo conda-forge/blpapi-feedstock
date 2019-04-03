@@ -1,5 +1,5 @@
 {% set name = "blpapi" %}
-{% set version = "3.13.0" %}
+{% set version = "3.12.2" %}
 {% set blpapicpp_linux_version = "3.12.3.1" %}
 {% set blpapicpp_win_version = "3.12.3.1" %}
 
@@ -10,7 +10,7 @@ package:
 
 source:
   - url: https://bloomberg.bintray.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: a3386e0a5080d5b05e07480d7787568227ae77eb46906edf906fda190c71eb7e
+    sha256: d6676adcfb2e8e9fd3a485525b7efd5634cec94d783bdfe3d3f49e3fa31b4a4e
   - url: https://bloomberg.bintray.com/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
     sha256: 3faf881921912de18eec687f47b976d8d924eb77ba0cfcd565b5330ab99a8765  # [linux]
   - url: https://software.tech.bloomberg/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
