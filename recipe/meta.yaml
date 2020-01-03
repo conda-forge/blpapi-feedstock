@@ -1,5 +1,5 @@
 {% set name = "blpapi" %}
-{% set version = "3.13.1" %}
+{% set version = "3.14.0" %}
 {% set blpapicpp_linux_version = "3.13.1.1" %}
 {% set blpapicpp_win_version = "3.13.1.1" %}
 
