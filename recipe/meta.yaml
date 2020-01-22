@@ -1,7 +1,8 @@
 {% set name = "blpapi" %}
 {% set version = "3.14.0" %}
-{% set blpapicpp_linux_version = "3.13.1.1" %}
-{% set blpapicpp_win_version = "3.13.1.1" %}
+{% set blpapicpp_linux_version = "3.14.3.1" %}
+{% set blpapicpp_win_version = "3.14.3.1" %}
+{% set blpapicpp_osx_version = "3.14.3.1" %}
 
 
 package:
@@ -12,15 +13,18 @@ source:
   - url: https://bloomberg.bintray.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: a8c4cf94e2ac8d9ce75158ed4c58999b426e0c104d2de24e5bc854998fca5ae2
   - url: https://bloomberg.bintray.com/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
-    sha256: 7406ad3d134d7c937212870059c1b03cd5f419decd32ea5b40d4e4c9a60beb12  # [linux]
+    sha256: ba70ae2cba4cba571cf7b1d68cf6bcf20f1abac854e7a82e0950a7fb60ee7c59  # [linux]
   - url: https://software.tech.bloomberg/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
-    sha256: 757476a9890b41dba8473e6b8bb3eda00620c3360aa9fcf95384197def795828  # [win]
+    sha256: 59f5902ba21aeff62aa762b791221ae7261c4d7afd7128498dcfdfba1f1c3ff1  # [win]
+  - url: https://software.tech.bloomberg/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-macos.tar.gz  # [osx]
+    sha256: 402296ec483f0452e3689c1eba39e3b92a15dd67388b491676c1fd35f3cbb59c  # [osx]
 
 build:
   number: 0
   skip: true  # [osx]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_linux_version }}_{{ PKG_BUILDNUM }}  # [linux]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_win_version }}_{{ PKG_BUILDNUM }}  # [win]
+  string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_osx_version }}_{{ PKG_BUILDNUM }}  # [osx]
 
 requirements:
   build:
