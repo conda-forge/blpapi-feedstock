@@ -11,7 +11,7 @@ package:
 
 source:
   - url: https://bloomberg.bintray.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: a8c4cf94e2ac8d9ce75158ed4c58999b426e0c104d2de24e5bc854998fca5ae2
+    sha256: 1d0cbccf0b316f210e847868da21fa424cf45ad63fc0cd809cda58fd730eeb50
   - url: https://bloomberg.bintray.com/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
     sha256: ba70ae2cba4cba571cf7b1d68cf6bcf20f1abac854e7a82e0950a7fb60ee7c59  # [linux]
   - url: https://software.tech.bloomberg/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
