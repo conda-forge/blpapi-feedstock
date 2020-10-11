@@ -20,7 +20,7 @@ source:
     sha256: 402296ec483f0452e3689c1eba39e3b92a15dd67388b491676c1fd35f3cbb59c  # [osx]
 
 build:
-  number: 1
+  number: 2
   skip: true  # [osx]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_linux_version }}_{{ PKG_BUILDNUM }}  # [linux]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_win_version }}_{{ PKG_BUILDNUM }}  # [win]
