@@ -5,11 +5,9 @@ Home: https://www.bloomberg.com/professional/support/api-library/
 
 Package license: Copyright 2012. Bloomberg Finance L.P.
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blpapi-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python SDK for Bloomberg BLPAPI (<=3.9)
-
-
 
 Current build status
 ====================
@@ -29,31 +27,38 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_python3.6.____73_pypy</td>
+              <td>linux_64_cxx_compiler_version7python3.6.____73_pypy</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3711&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blpapi-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.6.____73_pypy" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blpapi-feedstock?branchName=master&jobName=linux&configuration=linux_64_cxx_compiler_version7python3.6.____73_pypy" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.6.____cpython</td>
+              <td>linux_64_cxx_compiler_version7python3.6.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3711&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blpapi-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.6.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blpapi-feedstock?branchName=master&jobName=linux&configuration=linux_64_cxx_compiler_version7python3.6.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.7.____cpython</td>
+              <td>linux_64_cxx_compiler_version7python3.7.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3711&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blpapi-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.7.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blpapi-feedstock?branchName=master&jobName=linux&configuration=linux_64_cxx_compiler_version7python3.7.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_python3.8.____cpython</td>
+              <td>linux_64_cxx_compiler_version7python3.8.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3711&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blpapi-feedstock?branchName=master&jobName=linux&configuration=linux_64_python3.8.____cpython" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blpapi-feedstock?branchName=master&jobName=linux&configuration=linux_64_cxx_compiler_version7python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_cxx_compiler_version7python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3711&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blpapi-feedstock?branchName=master&jobName=linux&configuration=linux_64_cxx_compiler_version7python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -75,6 +80,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3711&branchName=master">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blpapi-feedstock?branchName=master&jobName=win&configuration=win_64_python3.8.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.9.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3711&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/blpapi-feedstock?branchName=master&jobName=win&configuration=win_64_python3.9.____cpython" alt="variant">
                 </a>
               </td>
             </tr>
