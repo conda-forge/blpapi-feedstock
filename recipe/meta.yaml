@@ -12,7 +12,7 @@ package:
 source:
   - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: ffcb9c3ff198fbf3c4ae44c7f6be10e768a1af66818c2881e2b430e7e1be3ed6
-  - url: https://bcms.bloomberg.com/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
+  - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
     sha256: d8e0db4b4754f725c052084c09c07e3d111f655fd7079762f23ecc05d6402afd  # [linux]
   - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
     sha256: 82c3935a83487b8f3bbe3b3d0bb5d56abbd36b4461f8141ff1e42a746414979c  # [win]
