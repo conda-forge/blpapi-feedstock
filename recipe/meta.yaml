@@ -1,8 +1,8 @@
 {% set name = "blpapi" %}
-{% set version = "3.15.2" %}
-{% set blpapicpp_linux_version = "3.15.0.1" %}
-{% set blpapicpp_win_version = "3.15.0.1" %}
-{% set blpapicpp_osx_version = "3.15.0.1" %}
+{% set version = "3.16.2" %}
+{% set blpapicpp_linux_version = "3.16.1.1" %}
+{% set blpapicpp_win_version = "3.16.1.1" %}
+{% set blpapicpp_osx_version = "3.16.1.1" %}
 
 
 package:
@@ -10,18 +10,17 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://bloomberg.bintray.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 483cc2b66991f3afb8bdd3d4363a287dbb8b296f53957a1bfe9ad76f3d39649b
-  - url: https://bloomberg.bintray.com/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
-    sha256: 8fa24fe78a4e901513c8a5f4fef33834880b62b9237ac5644147f7b21f5e6476  # [linux]
-  - url: https://software.tech.bloomberg/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
-    sha256: 0e58f14c8088b366f9b80659bbb1661831d32ad5be4aa8aef4fa08c054840f25  # [win]
-  - url: https://software.tech.bloomberg/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-macos.tar.gz  # [osx]
-    sha256: 26a0b77e8fc629e75662f4ac7ec6f3fc41927bd8e47b2372f2be7f2b38ed48d5  # [osx]
+  - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    sha256: 8980ef85ffb02845d8b9b8b83ac29f9355098bfda7ebb0c3076ed2b7f8e38739
+  - url: https://bcms.bloomberg.com/BLPAPI-Experimental-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
+    sha256: d8e0db4b4754f725c052084c09c07e3d111f655fd7079762f23ecc05d6402afd  # [linux]
+  - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
+    sha256: 82c3935a83487b8f3bbe3b3d0bb5d56abbd36b4461f8141ff1e42a746414979c  # [win]
+  - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-macos.tar.gz  # [osx]
+    sha256: e99ad9dea748755d3abfcce5cbd1a076e7ee5d9da7b12ca7d718e6801026bf68  # [osx]
 
 build:
   number: 0
-  skip: true  # [osx]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_linux_version }}_{{ PKG_BUILDNUM }}  # [linux]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_win_version }}_{{ PKG_BUILDNUM }}  # [win]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_osx_version }}_{{ PKG_BUILDNUM }}  # [osx]
