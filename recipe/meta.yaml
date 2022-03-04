@@ -1,5 +1,5 @@
 {% set name = "blpapi" %}
-{% set version = "3.17.1" %}
+{% set version = "3.18.0" %}
 {% set blpapicpp_linux_version = "3.16.1.1" %}
 {% set blpapicpp_win_version = "3.16.1.1" %}
 {% set blpapicpp_osx_version = "3.16.1.1" %}
@@ -11,7 +11,7 @@ package:
 
 source:
   - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: b28587e61614b718e53a007141190aff22ad2baa4dfb2cd6bc34d043b52cd8a5
+    sha256: d8cf8038ae79e8a217aa0b3d1ff84034140bac5992afd492e576a749df00f80b
   - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
     sha256: d8e0db4b4754f725c052084c09c07e3d111f655fd7079762f23ecc05d6402afd  # [linux]
   - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
