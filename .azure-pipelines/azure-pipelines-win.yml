@@ -40,9 +40,11 @@ jobs:
           url = 'https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Windows-x86_64.exe'
           path = r"$(Build.ArtifactStagingDirectory)/Miniforge.exe"
           urllib.request.urlretrieve(url, path)
+
     - script: |
         start /wait "" %BUILD_ARTIFACTSTAGINGDIRECTORY%\Miniforge.exe /InstallationType=JustMe /RegisterPython=0 /S /D=C:\Miniforge
       displayName: Install Miniforge
+
     - powershell: Write-Host "##vso[task.prependpath]C:\Miniforge\Scripts"
       displayName: Add conda to PATH
 
@@ -50,6 +52,7 @@ jobs:
         call activate base
         mamba.exe install 'python=3.9' conda-build conda pip boa 'conda-forge-ci-setup=3' -c conda-forge --strict-channel-priority --yes
       displayName: Install conda-build
+
     - script: set PYTHONUNBUFFERED=1
       displayName: Set PYTHONUNBUFFERED
 
@@ -58,12 +61,14 @@ jobs:
         call activate base
         setup_conda_rc .\ ".\recipe" .\.ci_support\%CONFIG%.yaml
       displayName: conda-forge CI setup
+
     # Configure the VM.
     - script: |
         set "CI=azure"
         call activate base
         run_conda_forge_build_setup
       displayName: conda-forge build setup
+
     - script: |
         call activate base
         if EXIST LICENSE.txt (
@@ -73,7 +78,6 @@ jobs:
       displayName: Build recipe
       env:
         PYTHONUNBUFFERED: 1
-
     - script: |
         set "FEEDSTOCK_NAME=%BUILD_REPOSITORY_NAME:*/=%"
         call activate base
