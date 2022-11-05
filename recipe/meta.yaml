@@ -1,5 +1,5 @@
 {% set name = "blpapi" %}
-{% set version = "3.18.3" %}
+{% set version = "3.19.1" %}
 {% set blpapicpp_linux_version = "3.18.4.1" %}
 {% set blpapicpp_win_version = "3.18.4.1" %}
 {% set blpapicpp_osx_version = "3.18.4.1" %}
@@ -11,7 +11,7 @@ package:
 
 source:
   - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 3bd58b10bbb1c18bd3a6f736873bbcad67ab0cac0cfa4199c9478c9e931bce8e
+    sha256: d85f6c41eb4ba17ab594d7a497a7960cf759943a23ed157b82d56372105352e9
   - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
     sha256: fd006b021a7bfcc78ff35deb7f1b5f7f00fe21e52c05ae7d5e231b9f743d168f  # [linux]
   - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
@@ -19,12 +19,12 @@ source:
   - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-macos.tar.gz  # [osx]
     sha256: 58b9f9a37ecb3b1d14a71b38e68b91a8ee9d324438663b69732d6f1b77cff7c5  # [osx]
   - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}-cp39-cp39-macosx_10_9_x86_64.whl  # [osx]
-    sha256: 98654108a89e40f0cec62de2dc968fe2ca5eb469c7353463f2842277093ae4f6  # [osx]
+    sha256: 4f50344150daf2e7c9857aa336176b53311b3b66e0fc4a7afacec41940b679ff  # [osx]
   - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}-cp310-cp310-macosx_10_9_universal2.whl  # [osx]
-    sha256: 5bb5e9049c3e55921d62ba3ff977cfec73a368a1d7d12358a0eaa24fd6902b75  # [osx]
+    sha256: b4fbddc9c996c3ad4bb4313f596fe713171423f6d6425dbde6c3c2deda6652a9  # [osx]
 
 build:
-  number: 1
+  number: 0
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_linux_version }}_{{ PKG_BUILDNUM }}  # [linux]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_win_version }}_{{ PKG_BUILDNUM }}  # [win]
   string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_osx_version }}_{{ PKG_BUILDNUM }}  # [osx]
