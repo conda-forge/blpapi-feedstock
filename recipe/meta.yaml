@@ -24,10 +24,7 @@ source:
     sha256: b4fbddc9c996c3ad4bb4313f596fe713171423f6d6425dbde6c3c2deda6652a9  # [osx]
 
 build:
-  number: 0
-  string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_linux_version }}_{{ PKG_BUILDNUM }}  # [linux]
-  string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_win_version }}_{{ PKG_BUILDNUM }}  # [win]
-  string: py{{ CONDA_PY }}_blpapicpp{{ blpapicpp_osx_version }}_{{ PKG_BUILDNUM }}  # [osx]
+  number: 1
 
 requirements:
   build:
