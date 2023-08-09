@@ -2,8 +2,10 @@
 
 export BLPAPI_ROOT="."
 
-if [ -d "$BLPAPI_ROOT/Darwin"]; then
-   cp -v blpapi/.dylibs/lib*.so $BLPAPI_ROOT/Darwin/
+if [ -d "$BLPAPI_ROOT/Darwin" ]; then
+   echo "Copying dynamic library from python wheel"
+   ls ./blpapi
+   cp -v ./blpapi/.dylibs/lib*.so $BLPAPI_ROOT/Darwin/
 fi
 
 $PYTHON -m pip install --no-deps --ignore-installed .
