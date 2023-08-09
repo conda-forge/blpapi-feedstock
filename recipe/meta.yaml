@@ -10,7 +10,7 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz # [not osx]
+  - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz  # [not osx]
     sha256: 6e9034cc8ad976615a49e2e4694cd1948e90a91438f842c8a7e2e01073470aba    # [not osx]
   - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
     sha256: 456123d318577b983ed5290c17b613a1088e17dba0b6652143f3041dd445c509    # [linux]
