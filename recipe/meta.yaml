@@ -18,14 +18,6 @@ source:
     sha256: 4976c859ecef574c3cd9a656677f180c97493efb6df98a2f18f04c34894d5943    # [win]
   - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-macos.tar.gz  # [osx]
     sha256: eaf9f3e5caede1655277d19d5f78d9f2c5a6d9f922056eef323fe57d3a9734ee    # [osx]
-  - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}-cp38-cp38-macosx_10_9_x86_64.whl  # [osx]
-    sha256: 328b76d28c7090edd3bb82800a3bc9f2219b1607ef68312f5927cb788022f22f    # [osx]
-  - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}-cp39-cp39-macosx_10_9_x86_64.whl  # [osx]
-    sha256: bd19dd9c5ed5ec9a486238aab31626c6a942afe1ba71c97b65baf63316d41266    # [osx]
-  - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}-cp310-cp310-macosx_10_9_x86_64.whl  # [osx]
-    sha256: ccc7943271dfde3e0d2e753f57ac5d4746469676f9a1c3a1288ba987c0c78ada    # [osx]
-  - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}-cp311-cp311-macosx_10_9_x86_64.whl  # [osx]
-    sha256: b6ed7ed142d3bdd589d463fff541c1000c4e64163f5d6ed5f3772eb329f5a65f    # [osx]
 
 build:
   number: 0
