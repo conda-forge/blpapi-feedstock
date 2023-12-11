@@ -1,7 +1,7 @@
 # Please consult conda-forge/core before doing this
 MACOSX_DEPLOYMENT_TARGET:  # [osx]
-  - "12.0"                 # [osx and x86_64]
-  - "12.0"                 # [osx and aarch64]
+  - "12.3"                 # [osx and x86_64]
+  - "12.3"                 # [osx and aarch64]
 MACOSX_SDK_VERSION:        # [osx]
-  - "12.0"                 # [osx and x86_64]
-  - "12.0"                 # [osx and aarch64]
+  - "12.3"                 # [osx and x86_64]
+  - "12.3"                 # [osx and aarch64]
