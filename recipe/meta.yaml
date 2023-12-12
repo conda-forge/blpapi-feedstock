@@ -19,8 +19,8 @@ source:
     sha256: 6c41da17cd2f6fd192d0a2d43d941302be521d18c741880dccf20701ceafa149    # [win]
   - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-macos.tar.gz  # [osx and x86_64]
     sha256: 6d6b391a5e08bbda27257703460956b7ba856752e25b875d44761e3cc9934711    # [osx and x86_64]
-  - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-macos-arm64.tar.gz  # [osx and aarch64]
-    sha256: 12d83f451a918ed20d109f8e038a1b4f6fb0a2f95a6f95f9cf849f6593e5ee42    # [osx and aarch64]
+  - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-macos-arm64.tar.gz  # [osx and arm64]
+    sha256: 12d83f451a918ed20d109f8e038a1b4f6fb0a2f95a6f95f9cf849f6593e5ee42    # [osx and arm64]
 
 build:
   number: 0
