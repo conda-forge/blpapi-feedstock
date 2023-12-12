@@ -34,9 +34,9 @@ requirements:
   run:
     - python
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
-test:
-  imports:
-    - blpapi
+test:  # [not osx]
+  imports:  # [not osx]
+    - blpapi  # [not osx]
 
 about:
   home: https://www.bloomberg.com/professional/support/api-library/
