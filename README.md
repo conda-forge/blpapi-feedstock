@@ -5,9 +5,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/blpapi-feedstoc
 
 Home: https://www.bloomberg.com/professional/support/api-library/
 
-Package license: Copyright 2012. Bloomberg Finance L.P.
+Package license: LicenseRef-Bloomberg-BLPAPI
 
-Summary: Python SDK for Bloomberg BLPAPI (<=3.9)
+Summary: Python SDK for Bloomberg BLPAPI
 
 Current build status
 ====================
