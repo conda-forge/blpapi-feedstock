@@ -24,7 +24,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [osx and x86_64]
 
 requirements:
   build:
