@@ -1,8 +1,9 @@
 {% set name = "blpapi" %}
-{% set version = "3.19.1" %}
-{% set blpapicpp_linux_version = "3.19.1.1" %}
-{% set blpapicpp_win_version = "3.19.1.1" %}
-{% set blpapicpp_osx_version = "3.19.1.1" %}
+{% set version = "3.23.1" %}
+{% set blpapicpp_linux_version = "3.23.2.1" %}
+{% set blpapicpp_win_version = "3.23.2.1" %}
+{% set blpapicpp_osx_version = "3.23.2.1" %}
+{% set blpapicpp_osx_arm64_version = "3.23.2.1" %}
 
 
 package:
@@ -11,41 +12,42 @@ package:
 
 source:
   - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: d85f6c41eb4ba17ab594d7a497a7960cf759943a23ed157b82d56372105352e9
+    sha256: 5d60c7cf598cfadff01556b64b2b084d99f6ca5092094b6bb7131a02b65a2df5
   - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
-    sha256: d68ffe4e30a6dcc37a1884013dc67312802b1bdd7a4886ead5ac783bcfb1f180  # [linux]
+    sha256: 0642745602ecc5a596c417d4bc491f1f84d1c3b4a8c216a4f415807ddae31bb5    # [linux]
   - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
-    sha256: 55eea42d5587df52c39157ba9285c41f2cf4034d7fc614244cd1e58c9297d308  # [win]
-  - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-macos.tar.gz  # [osx]
-    sha256: d6d23831db85a674a0d647d2d2deac3e9aa9ada699e1588ab5f128d453e185ba  # [osx]
-  - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}-cp39-cp39-macosx_10_9_x86_64.whl  # [osx]
-    sha256: 4f50344150daf2e7c9857aa336176b53311b3b66e0fc4a7afacec41940b679ff  # [osx]
-  - url: https://bcms.bloomberg.com/pip/simple/{{ name }}/{{ name }}-{{ version }}-cp310-cp310-macosx_10_9_universal2.whl  # [osx]
-    sha256: b4fbddc9c996c3ad4bb4313f596fe713171423f6d6425dbde6c3c2deda6652a9  # [osx]
+    sha256: 6c41da17cd2f6fd192d0a2d43d941302be521d18c741880dccf20701ceafa149    # [win]
+  - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-macos.tar.gz  # [osx and x86_64]
+    sha256: 6d6b391a5e08bbda27257703460956b7ba856752e25b875d44761e3cc9934711    # [osx and x86_64]
+  - url: https://bcms.bloomberg.com/BLPAPI-Generic/blpapi_cpp_{{ blpapicpp_osx_version }}-macos-arm64.tar.gz  # [osx and arm64]
+    sha256: 12d83f451a918ed20d109f8e038a1b4f6fb0a2f95a6f95f9cf849f6593e5ee42    # [osx and arm64]
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
     - pip
   run:
     - python
-
 test:
   imports:
     - blpapi
 
 about:
   home: https://www.bloomberg.com/professional/support/api-library/
-  license: Copyright 2012. Bloomberg Finance L.P.
+  license: LicenseRef-Bloomberg-BLPAPI
   license_file: License.txt
-  summary: Python SDK for Bloomberg BLPAPI (<=3.9)
+  summary: Python SDK for Bloomberg BLPAPI
 
 extra:
   recipe-maintainers:
     - reggied
     - matthewgilbert
+    - adament
