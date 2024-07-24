@@ -1,5 +1,5 @@
 {% set name = "blpapi" %}
-{% set version = "3.24.4" %}
+{% set version = "3.24.6" %}
 {% set blpapicpp_linux_version = "3.24.4.1" %}
 {% set blpapicpp_win_version = "3.24.4.1" %}
 {% set blpapicpp_osx_version = "3.24.4.1" %}
@@ -12,13 +12,13 @@ package:
 
 source:
   - url: https://blpapi.bloomberg.com/repository/releases/python/{{ name }}-{{ version }}.tar.gz
-    sha256: 77a88addb073df647e615a76bdb0df91feb6003511efed2376087a8bab75b5e7
+    sha256: cc005116c759bce388eeaff3727d756433c8cf56a3da4f591f6094e168ecf066
   - url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_{{ blpapicpp_linux_version }}-linux.tar.gz  # [linux]
-    sha256: c2949dcc83831460271e969048abd9703e01eb27a67308f3a039816be2f439db    # [linux]
+    sha256: c2949dcc83831460271e969048abd9703e01eb27a67308f3a039816be2f439db  # [linux]
   - url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_{{ blpapicpp_win_version }}-windows.zip  # [win]
-    sha256: cef04c60afb872b9c9b000254d5ee22d56a8d66fa3454c0636e705c1aa7041a4    # [win]
+    sha256: cef04c60afb872b9c9b000254d5ee22d56a8d66fa3454c0636e705c1aa7041a4  # [win]
   - url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_{{ blpapicpp_osx_version }}-macos-arm64.tar.gz  # [osx and arm64]
-    sha256: 55453a13f43f564f003a654ac20dda3f30c2d4edc8fc9cf943f5b9ce3a928776    # [osx and arm64]
+    sha256: 55453a13f43f564f003a654ac20dda3f30c2d4edc8fc9cf943f5b9ce3a928776  # [osx and arm64]
 
 build:
   number: 0
