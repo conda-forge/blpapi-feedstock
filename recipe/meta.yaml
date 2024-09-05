@@ -1,9 +1,9 @@
 {% set name = "blpapi" %}
-{% set version = "3.24.4" %}
-{% set blpapicpp_linux_version = "3.24.4.1" %}
-{% set blpapicpp_win_version = "3.24.4.1" %}
-{% set blpapicpp_osx_version = "3.24.4.1" %}
-{% set blpapicpp_osx_arm64_version = "3.24.4.1" %}
+{% set version = "3.24.6" %}
+{% set blpapicpp_linux_version = "3.24.6.1" %}
+{% set blpapicpp_win_version = "3.24.6.1" %}
+{% set blpapicpp_osx_version = "3.24.6.1" %}
+{% set blpapicpp_osx_arm64_version = "3.24.6.1" %}
 
 
 package:
@@ -32,6 +32,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
+    - setuptools
     - pip
   run:
     - python
