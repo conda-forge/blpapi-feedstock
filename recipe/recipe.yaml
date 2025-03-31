@@ -1,6 +1,6 @@
 context:
   name: blpapi
-  version: 3.24.10
+  version: "3.25.1"
   blpapicpp_linux_version: 3.24.10.1
   blpapicpp_win_version: 3.24.10.1
   blpapicpp_osx_version: 3.24.10.1
@@ -11,7 +11,7 @@ package:
 
 source:
   - url: https://blpapi.bloomberg.com/repository/releases/python/${{ name }}-${{ version }}.tar.gz
-    sha256: 6ff5b6eb9c4d154f311d57d34c12ac839b634331add069a38965f11b0fe38794
+    sha256: 6df635fdbdb5afa068f766fc02d53e3eef77113b66dc57de0ea6caf2b1b6c812
   - if: linux
     then:
       url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_${{ blpapicpp_linux_version }}-linux.tar.gz
@@ -37,9 +37,9 @@ requirements:
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
+      then:
+        - python
+        - cross-python_${{ target_platform }}
   host:
     - python
     - setuptools
