@@ -1,6 +1,6 @@
 context:
   name: blpapi
-  version: "3.25.2.3"
+  version: "3.25.4.1"
   blpapicpp_linux_version: 3.25.2.1
   blpapicpp_win_version: 3.25.2.1
   blpapicpp_osx_version: 3.25.2.1
@@ -11,7 +11,7 @@ package:
 
 source:
   - url: https://blpapi.bloomberg.com/repository/releases/python/${{ name }}-${{ version }}.tar.gz
-    sha256: 9add6fb004273b90bd8f419a482b0a8e5ca62c245d293ecfcfd479200e7a5e2d
+    sha256: 2966cc4785e4056f88cd88c637456628dab2a386fb1bdbdda75a081edd81bc9e
   - if: linux
     then:
       url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_${{ blpapicpp_linux_version }}-linux.tar.gz
