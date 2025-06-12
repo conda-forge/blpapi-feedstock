@@ -1,9 +1,9 @@
 context:
   name: blpapi
   version: "3.25.5.1"
-  blpapicpp_linux_version: {{ version }}
-  blpapicpp_win_version: {{ version }}
-  blpapicpp_osx_version: {{ version }}
+  blpapicpp_linux_version: ${{ version }}
+  blpapicpp_win_version: ${{ version }}
+  blpapicpp_osx_version: ${{ version }}
 
 package:
   name: ${{ name|lower }}
