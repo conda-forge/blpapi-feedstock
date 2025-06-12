@@ -15,17 +15,17 @@ source:
   - if: linux
     then:
       url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_${{ blpapicpp_linux_version }}-linux.tar.gz
-      sha256: f147951927d4eb43f2a0d90dbf09d5ae73cbc191cafcd1ad76d5342f5a9937fc
+      sha256: 83f3efd9884eedb17636c5a402f65a0e800b09c9520a3ce8fe3d3c9cdab42151
       target_directory: blpapi
   - if: win
     then:
       url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_${{ blpapicpp_win_version }}-windows.zip
-      sha256: f4aa7b8d2a5c510008fce253cec09d049ea9cc25f752b037314deba106a4f91a
+      sha256: 4408aca8ec26f3775d1e46ba05e0984dd836fb13eb81dc20aa79083e460d7b07
       target_directory: blpapi
   - if: osx and arm64
     then:
       url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_${{ blpapicpp_osx_version }}-macos-arm64.tar.gz
-      sha256: 4759296406157679c8e2bd509a6752d81688ee585d0abb616dbf27e4d1d5b9a9
+      sha256: 2d4caa86b27d9ab17adcff9fdae48ce559e04f75bd927ff9efec7fd5a975bf10
       target_directory: blpapi
 
 build:
