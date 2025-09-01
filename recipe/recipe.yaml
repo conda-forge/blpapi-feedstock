@@ -29,7 +29,7 @@ source:
       target_directory: blpapi
 
 build:
-  number: 0
+  number: 1
   skip: osx and x86_64
 
 requirements:
