@@ -61,7 +61,8 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-blpapi-green.svg)](https://anaconda.org/conda-forge/blpapi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/blpapi.svg)](https://anaconda.org/conda-forge/blpapi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/blpapi.svg)](https://anaconda.org/conda-forge/blpapi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/blpapi.svg)](https://anaconda.org/conda-forge/blpapi) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-blpapi--cpp-green.svg)](https://anaconda.org/conda-forge/blpapi-cpp) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/blpapi-cpp.svg)](https://anaconda.org/conda-forge/blpapi-cpp) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/blpapi-cpp.svg)](https://anaconda.org/conda-forge/blpapi-cpp) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/blpapi-cpp.svg)](https://anaconda.org/conda-forge/blpapi-cpp) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libblpapi-green.svg)](https://anaconda.org/conda-forge/libblpapi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libblpapi.svg)](https://anaconda.org/conda-forge/libblpapi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libblpapi.svg)](https://anaconda.org/conda-forge/libblpapi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libblpapi.svg)](https://anaconda.org/conda-forge/libblpapi) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libblpapi--devel-green.svg)](https://anaconda.org/conda-forge/libblpapi-devel) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libblpapi-devel.svg)](https://anaconda.org/conda-forge/libblpapi-devel) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libblpapi-devel.svg)](https://anaconda.org/conda-forge/libblpapi-devel) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libblpapi-devel.svg)](https://anaconda.org/conda-forge/libblpapi-devel) |
 
 Installing blpapi
 =================
@@ -73,16 +74,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `blpapi, blpapi-cpp` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `blpapi, libblpapi, libblpapi-devel` can be installed with `conda`:
 
 ```
-conda install blpapi blpapi-cpp
+conda install blpapi libblpapi libblpapi-devel
 ```
 
 or with `mamba`:
 
 ```
-mamba install blpapi blpapi-cpp
+mamba install blpapi libblpapi libblpapi-devel
 ```
 
 It is possible to list all of the versions of `blpapi` available on your platform with `conda`:
