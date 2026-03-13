@@ -13,17 +13,7 @@ else
     exit 1
 fi
 
-# Install headers
-mkdir -p "$PREFIX/include"
-cp -rv "$SRC/include/"* "$PREFIX/include/"
-
 # Install shared libraries
 mkdir -p "$PREFIX/lib"
 cp -v "$PLATDIR/"lib*.so "$PREFIX/lib/" 2>/dev/null || \
 cp -v "$PLATDIR/"lib*.dylib "$PREFIX/lib/" 2>/dev/null || true
-
-# Install cmake config
-if [ -d "$SRC/cmake" ]; then
-    mkdir -p "$PREFIX/lib/cmake/blpapi"
-    cp -rv "$SRC/cmake/"* "$PREFIX/lib/cmake/blpapi/"
-fi

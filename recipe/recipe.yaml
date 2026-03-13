@@ -34,19 +34,43 @@ build:
 
 outputs:
   - package:
-      name: blpapi-cpp
+      name: libblpapi
       version: ${{ version }}
     build:
       script:
         - if: unix
-          then: build-cpp.sh
-          else: build-cpp.bat
+          then: build-lib.sh
+          else: build-lib.bat
     requirements:
       build:
         - ${{ compiler('cxx') }}
         - ${{ stdlib("c") }}
       run_exports:
-        - ${{ pin_subpackage('blpapi-cpp', upper_bound='x.x.x.x') }}
+        - ${{ pin_subpackage('libblpapi', upper_bound='x.x.x.x') }}
+    tests:
+      - script:
+          - if: unix
+            then:
+              - test -f $PREFIX/lib/libblpapi3_64.so || test -f $PREFIX/lib/libblpapi3_64.dylib
+            else:
+              - if exist %LIBRARY_PREFIX%\bin\blpapi3_64.dll (exit 0) else (exit 1)
+
+  - package:
+      name: libblpapi-devel
+      version: ${{ version }}
+    build:
+      script:
+        - if: unix
+          then: build-devel.sh
+          else: build-devel.bat
+    requirements:
+      build:
+        - ${{ compiler('cxx') }}
+        - ${{ stdlib("c") }}
+      host:
+        - ${{ pin_subpackage('libblpapi', exact=True) }}
+      run:
+        - ${{ pin_subpackage('libblpapi', exact=True) }}
     tests:
       - script:
           - if: unix
@@ -76,10 +100,10 @@ outputs:
         - python
         - setuptools
         - pip
-        - ${{ pin_subpackage('blpapi-cpp', exact=True) }}
+        - ${{ pin_subpackage('libblpapi-devel', exact=True) }}
       run:
         - python
-        - ${{ pin_subpackage('blpapi-cpp', exact=True) }}
+        - ${{ pin_subpackage('libblpapi', exact=True) }}
     tests:
       - python:
           imports:
