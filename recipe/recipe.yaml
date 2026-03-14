@@ -5,8 +5,8 @@ context:
   blpapicpp_win_version: ${{ version }}
   blpapicpp_osx_version: ${{ version }}
 
-package:
-  name: ${{ name|lower }}
+recipe:
+  name: blpapi-split
   version: ${{ version }}
 
 source:
@@ -32,25 +32,83 @@ build:
   number: 0
   skip: osx and x86_64
 
-requirements:
-  build:
-    - ${{ compiler('cxx') }}
-    - ${{ stdlib("c") }}
-    - if: build_platform != target_platform
-      then:
-        - python
-        - cross-python_${{ target_platform }}
-  host:
-    - python
-    - setuptools
-    - pip
-  run:
-    - python
+outputs:
+  - package:
+      name: libblpapi
+      version: ${{ version }}
+    build:
+      script:
+        - if: unix
+          then: build-lib.sh
+          else: build-lib.bat
+    requirements:
+      build:
+        - ${{ compiler('cxx') }}
+        - ${{ stdlib("c") }}
+      run_exports:
+        - ${{ pin_subpackage('libblpapi', upper_bound='x.x.x.x') }}
+    tests:
+      - script:
+          - if: unix
+            then:
+              - test -f $PREFIX/lib/libblpapi3_64.so || test -f $PREFIX/lib/libblpapi3_64.dylib
+            else:
+              - if exist %LIBRARY_PREFIX%\bin\blpapi3_64.dll (exit 0) else (exit 1)
 
-tests:
-  - python:
-      imports:
-        - blpapi
+  - package:
+      name: libblpapi-devel
+      version: ${{ version }}
+    build:
+      script:
+        - if: unix
+          then: build-devel.sh
+          else: build-devel.bat
+    requirements:
+      build:
+        - ${{ compiler('cxx') }}
+        - ${{ stdlib("c") }}
+      host:
+        - ${{ pin_subpackage('libblpapi', exact=True) }}
+      run:
+        - ${{ pin_subpackage('libblpapi', exact=True) }}
+    tests:
+      - script:
+          - if: unix
+            then:
+              - test -f $PREFIX/include/blpapi_session.h
+              - test -d $PREFIX/lib/cmake/blpapi || true
+            else:
+              - if exist %LIBRARY_PREFIX%\include\blpapi_session.h (exit 0) else (exit 1)
+
+  - package:
+      name: blpapi
+      version: ${{ version }}
+    build:
+      script:
+        - if: unix
+          then: build-py.sh
+          else: build-py.bat
+    requirements:
+      build:
+        - ${{ compiler('cxx') }}
+        - ${{ stdlib("c") }}
+        - if: build_platform != target_platform
+          then:
+            - python
+            - cross-python_${{ target_platform }}
+      host:
+        - python
+        - setuptools
+        - pip
+        - ${{ pin_subpackage('libblpapi-devel', exact=True) }}
+      run:
+        - python
+        - ${{ pin_subpackage('libblpapi', exact=True) }}
+    tests:
+      - python:
+          imports:
+            - blpapi
+          pip_check: false
 
 about:
   license: LicenseRef-Bloomberg-BLPAPI
@@ -63,3 +121,4 @@ extra:
     - reggied
     - matthewgilbert
     - adament
+    - benmoss
