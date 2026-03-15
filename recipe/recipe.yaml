@@ -1,6 +1,6 @@
 context:
   name: blpapi
-  version: "3.26.1.1"
+  version: "3.26.2.1"
   blpapicpp_linux_version: ${{ version }}
   blpapicpp_win_version: ${{ version }}
   blpapicpp_osx_version: ${{ version }}
@@ -11,21 +11,21 @@ package:
 
 source:
   - url: https://blpapi.bloomberg.com/repository/releases/python/${{ name }}-${{ version }}.tar.gz
-    sha256: 844eed5a8246ed2ab1910a204fe3a0e6a9a4878e0c4d8c97ba9bbd67acb0ea6b
+    sha256: 1f71f54aeacf264496a6d56d84a66798c079c8c7364259e4e6955f0d8fc89fd4
   - if: linux
     then:
       url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_${{ blpapicpp_linux_version }}-linux.tar.gz
-      sha256: 6f1e525de1094def3e29488c06e89b24b30c409120b4faecda5e38557a5f5251
+      sha256: 3345796f28591d1cd70983abf92b1edeff2c3d8335fe282431d57a12a623a87c
       target_directory: blpapi
   - if: win
     then:
       url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_${{ blpapicpp_win_version }}-windows.zip
-      sha256: 5bca864d38d43e02a67eb480287e90ed9472b8e0b8728060644bfec3027d5f76
+      sha256: c5ff450072d2e6cc02663d13156612ad7b32b97b462132b5b156ec1733d5ed9d
       target_directory: blpapi
   - if: osx and arm64
     then:
       url: https://blpapi.bloomberg.com/download/releases/raw/files/blpapi_cpp_${{ blpapicpp_osx_version }}-macos-arm64.tar.gz
-      sha256: 8d2517338a9ad5c003f93469da8619a335f9bb1f652c78cf7e3fe18ab507a6c8
+      sha256: 797363bebcd9d7188f1b7e9d37c74fb54badd79468f8d0e56e2974f7497c2f6c
       target_directory: blpapi
 
 build:
