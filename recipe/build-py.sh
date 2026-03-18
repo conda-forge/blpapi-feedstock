@@ -1,5 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-export BLPAPI_ROOT="$SRC_DIR/blpapi"
+export BLPAPI_INCDIR="$PREFIX/include"
+export BLPAPI_LIBDIR="$PREFIX/lib"
 $PYTHON -m pip install . --no-deps --no-build-isolation

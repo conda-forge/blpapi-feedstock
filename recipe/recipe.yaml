@@ -79,6 +79,7 @@ outputs:
               - test -d $PREFIX/lib/cmake/blpapi || true
             else:
               - if exist %LIBRARY_PREFIX%\include\blpapi_session.h (exit 0) else (exit 1)
+              - if exist %LIBRARY_PREFIX%\lib\blpapi3_64.lib (exit 0) else (exit 1)
 
   - package:
       name: blpapi
